@@ -10,7 +10,7 @@
 
             Console.WriteLine("Välkommen till din Handlingslista");
             Console.WriteLine("Ville du lägga till något?");
-§§
+
             Console.ReadKey();
         }
     }
