@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata;
+using System.Runtime.InteropServices;
 
 namespace PracticeOne
 {
@@ -12,31 +13,31 @@ namespace PracticeOne
 
             Console.WriteLine("Detta är din Handlingslista.");
 
-            while (AddLoop)
+            while (AddLoop) //while-loop to keep the user in the loop until they choose to continue.
             {
-                if (qLoop)
+                if (qLoop) //this only changes the first question after the first time it is asked.
                 {
                     Console.WriteLine("Vill du lägga till något?");
                     qLoop = false;
                 }
                 else
                 {
-                    Console.WriteLine("Vill du lägga till något mer?");
+                    Console.WriteLine("Vill du lägga till något mer?"); //the altered question. 
                 }
             
-                Console.WriteLine("Y / N");
+                Console.WriteLine("Y / N"); //a statement to make the user know what to answer.
                 string answer = Console.ReadLine()!;
 
 
                 if (answer == "y")
                 {
-                    Console.WriteLine("Vad vill du lägga till?");
+                    Console.WriteLine("Vad vill du lägga till?"); //if the user answers "y" on the Q before, this questions appear.
                     ShopList.Add(Console.ReadLine()!);
                 }
             
                 else
                 {
-                    Console.WriteLine("Din handlingslista.");
+                    Console.WriteLine("Din handlingslista."); //if the user answers no on the Q the while-loop is cancelled and the shoppinglist appers with every item added.
                     AddLoop = false;
                 }
 
@@ -47,6 +48,5 @@ namespace PracticeOne
 
             Console.ReadKey();
         }
-            
     }
 }
