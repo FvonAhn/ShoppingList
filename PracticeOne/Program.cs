@@ -1,18 +1,16 @@
-﻿namespace PracticeOne
+﻿using System.Reflection.Metadata;
+
+namespace PracticeOne
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             List<string> ShopList = new List<string>();
-            bool loopList = false;
-            string toBuy;
 
-            Console.WriteLine("Välkommen till din Handlingslista");
-            Console.WriteLine("Ville du lägga till något?");
-            toBuy = Console.ReadLine();
-            Console.WriteLine("Du la till " + toBuy + "!");
-            Console.ReadKey();
+            Console.WriteLine("Detta är din Handlingslista.");
+            Console.WriteLine("Vill du lägga till något?");
+    
         }
     }
 }
