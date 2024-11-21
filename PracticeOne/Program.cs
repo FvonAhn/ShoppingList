@@ -13,7 +13,7 @@ namespace PracticeOne
 
             Console.WriteLine("Detta är din Handlingslista.");
 
-            while (AddLoop) //while-loop to keep the user in the loop until they choose to continue.
+            while (AddLoop) //while-loop to keep the user in the loop until they chooses to quit.
             {
                 if (qLoop) //this only changes the first question after the first time it is asked.
                 {
@@ -31,17 +31,16 @@ namespace PracticeOne
 
                 if (answer == "y")
                 {
-                    Console.WriteLine("Vad vill du lägga till?"); //if the user answers "y" on the Q before, this questions appear.
+                    Console.WriteLine("Vad vill du lägga till?"); // if the user answers "y" on the Q before, this questions appear.
                     ShopList.Add(Console.ReadLine()!);
                 }
                 else if (answer == "n") 
                 {
-                    Console.WriteLine("Din handlingslista."); //if the user answers "no" on the Q the while-loop is cancelled and the shoppinglist appers with every item added.
-                    AddLoop = false;
+                    AddLoop = false; // if the user answers "no" on the Q the while-loop.
                 }
                 else
                 {
-                    Console.WriteLine("Error, du kan enbart svara Ja(y) eller nej(n)på frågan."); 
+                    Console.WriteLine("Error, du kan enbart svara Ja(y) eller nej(n)på frågan."); //error message for when the user chooses anything other the "y" or "n".
                 }
 
             }
@@ -51,7 +50,8 @@ namespace PracticeOne
                 Console.WriteLine("Din Handlingslisa är tom."); // this shows if the user dont add anything to the list.
             }
             else
-            { 
+            {
+                Console.WriteLine("Din Handlingslista:");
                 foreach (string item in ShopList)
                     Console.WriteLine($"- {item}"); // and this writes out everything the user added to the list.
             }
